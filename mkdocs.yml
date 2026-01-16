@@ -1,61 +1,21 @@
 site_name: Matthew Goldsberry
-site_description: Computer Science Student 
+site_description: Computer Science Student
 site_author: Matthew Goldsberry
 site_url: https://MatthewGoldsberry.github.io/
 
 nav:
-  - Home: index.md
-  - Projects: projects.md
+  - About: index.md
+  - Projects:
+    - Projects Overview: projects/projects.md
+    - Pong From Pixels: projects/pong-from-pixels.md
   - Experience & Skills: experience.md
   - Resume: resume.md
   - Contact: contact.md
 
 theme:
-  name: material
+  name: zensical
   language: en
-  logo: assets/images/logo.png        # optional
-  favicon: assets/images/favicon.png  # optional
-  features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.instant
-    - navigation.instant.progress
-    - navigation.top
-    - navigation.footer
-    - content.code.copy
-    - content.code.annotate
-    - search.highlight
-    - search.share
-    - toc.follow
-
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/MatthewGoldsberry
-      name: GitHub
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/matthew-goldsberry/
-      name: LinkedIn
-    - icon: fontawesome/solid/envelope
-      link: mailto:goldsbme@mail.uc.edu
-      name: Email
-    - icon: fontawesome/solid/file
-      link: assets/YourName_Resume.pdf
-      name: Resume PDF
+  custom_dir: overrides
 
 plugins:
   - search
@@ -65,13 +25,13 @@ markdown_extensions:
   - footnotes
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.highlight:
-      anchor_linenums: true
+  - pymdownx.highlight
   - pymdownx.inlinehilite
-  - pymdownx.tabbed:
-      alternate_style: true
+  - pymdownx.tabbed
   - toc:
       permalink: true
 
 extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
   - assets/styles/extra.css
+
