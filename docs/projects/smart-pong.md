@@ -222,4 +222,8 @@ I presented the SmartPong program at Discovery Lab Global during the **Ohio Defe
 
 I co-authored a **450+ page technical document** for the project, covering implementation, reinforcement learning theory, and broader AI context. All concepts referenced here are detailed in that document. To improve accessibility, I created a **condensed 30-page excerpt** highlighting key design decisions and connections to modern AI research, including *Pong from Pixels* (Karpathy), *Attention Is All You Need* (Vaswani et al.), and the use of ChatGPT as a development aid.
 
-> 📄 **[Download the 30-Page Technical Excerpt](../assets/docs/smartpong-technical-excerpt.pdf)**
+> **[Download the 30-Page Technical Excerpt](../assets/docs/smartpong-technical-excerpt.pdf)**
+
+---
+
+**[View the GitHub Repository](https://github.com/MatthewGoldsberry/PongAI-QLearning)**
