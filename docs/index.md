@@ -15,6 +15,6 @@
   </div>
 
   <div style="flex: 0 0 250px; max-width: 100%;">
-    <img src="assets/images/profile.jpg" alt="Matthew Goldsberry" style="border-radius: 50%; width: 100%; display: block;">
+    <img src="assets/media/profile.jpg" alt="Matthew Goldsberry" style="border-radius: 50%; width: 100%; display: block;">
   </div>
 </div>
