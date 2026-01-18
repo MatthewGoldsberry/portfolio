@@ -7,7 +7,7 @@ nav:
   - About: index.md
   - Projects:
     - Projects Overview: projects/projects.md
-    - Pong From Pixels: projects/pong-from-pixels.md
+    - Smart Pong: projects/smart-pong.md
   - Experience & Skills: experience.md
   - Resume: resume.md
   - Contact: contact.md
@@ -28,6 +28,9 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.tabbed
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
   - toc:
       permalink: true
 
