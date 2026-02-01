@@ -17,7 +17,7 @@ Learn more about the organization at the [CubeCats website](https://uccubecats.g
 
 ---
 
-## Smart Pong
+## [Smart Pong](./smart-pong.md)
 
 **Smart Pong** is an AI-driven project completed through the [Discovery Lab Global](https://www.discoverylabglobal.com/) AI program following my freshman year. At the time, I had limited prior experience with both programming and machine learning.
 
