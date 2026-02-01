@@ -7,9 +7,9 @@ nav:
   - About: index.md
   - Projects:
     - Projects Overview: projects/projects.md
-    - CubeCats: projects/cube-cats.md
+    # - CubeCats: projects/cube-cats.md
     - Smart Pong: projects/smart-pong.md
-  - Experience & Skills: experience.md
+  # - Experience & Skills: experience.md
   - Resume: resume.md
 
 theme:
