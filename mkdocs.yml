@@ -16,6 +16,7 @@ theme:
   name: zensical
   language: en
   custom_dir: overrides
+  favicon: assets/favicon.png
 
 plugins:
   - search
