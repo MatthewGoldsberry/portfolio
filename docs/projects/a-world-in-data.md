@@ -15,7 +15,7 @@ This project is an interactive data visualization environment designed to teach 
 
 <figure markdown="span">
   <video controls loop muted playsinline width="700">
-    <source src="/assets/media/a-world-in-data/video_demo.mp4" type="video/mp4">
+    <source src="https://github.com/MatthewGoldsberry/portfolio/releases/download/v0.0.1/a_world_in_data_video_demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </figure>
