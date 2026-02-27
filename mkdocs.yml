@@ -8,6 +8,7 @@ nav:
   - Projects:
     - Projects Overview: projects/projects.md
     # - CubeCats: projects/cube-cats.md
+    - A World in Data: projects/a-world-in-data.md
     - Smart Pong: projects/smart-pong.md
   # - Experience & Skills: experience.md
   - Resume: resume.md
@@ -33,6 +34,7 @@ markdown_extensions:
   - md_in_html
   - pymdownx.blocks.caption
   - toc:
+      toc_depth: 2
       permalink: true
 
 extra_css:

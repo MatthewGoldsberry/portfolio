@@ -17,6 +17,14 @@ Learn more about the organization at the [CubeCats website](https://uccubecats.g
 
 ---
 
+## [A World in Data: How Basic Infrastructure Shapes Life Expectancy](./a-world-in-data.md)
+
+This is an interactive data exploration platform built with `D3.js` to analyze global life expectancy and its correlations with basic infrastructure (access to basic sanitation, drinking water, and electricity). This application utilizes a synchronized visualization system to enable analysis across geographic and statistical datasets.
+
+[**View the Live Application**](https://how-basic-infrastructure-shapes-life-expectancy.vercel.app/)
+
+---
+
 ## [Smart Pong](./smart-pong.md)
 
 **Smart Pong** is an AI-driven project completed through the [Discovery Lab Global](https://www.discoverylabglobal.com/) AI program following my freshman year. At the time, I had limited prior experience with both programming and machine learning.
