@@ -8,7 +8,7 @@ nav:
   - Projects:
     - Projects Overview: projects/projects.md
     # - CubeCats: projects/cube-cats.md
-    - Who You Gonna Call? 3-1-1!: projects/who-you-gonna-call.md
+    - Who You Gonna Call?: projects/who-you-gonna-call.md
     - A World in Data: projects/a-world-in-data.md
     - Smart Pong: projects/smart-pong.md
   # - Experience & Skills: experience.md
