@@ -135,17 +135,19 @@ Now more than ever, modern technology is giving us new ways to approach and solv
 
 Looking at how these are distrubuted on the map, more urban areas specifically, like downtown, are relying more on the internet, with almost no 311 calls coming from this part of Cincinnati. More people, especially in the city, are relying more on the internet to submit requests, and the Cincinnati government website seems very user-friendly, easy to understand, and well built. They even have a mobile app! I think they should advertise this more, and continue leaning into the use of technology like this, especially because this is the first I've heard of online 311 submissions.
 
-![Zimbabwe Over Time](../assets/media/a-world-in-data/zimbabwe_over_time.png)
+![Modern Technology](../assets/media/a-world-in-data/service-call-methods.png)
 
 ### Finding 3: The Trash Problem in CUF
 
 There are a lot of requests on the map, and things get quite tightly packed, especially just south-west of the University of Cincinnati in CUF. In fact, there is a very large clump of light blue, trash service requests, in the residential areas where a lot of UC upperclassmen live. Most of these are improper trash set-out requests. The timeline shows that these requests are super concentrated in July and August, right around the time that move-in and move-out happens for the new academic year. I think these might be related, and could be helpful information for the City of Cincinnati to know to find ways to deal with this end of summer trash problem.
 
-![The Outlier, Nauru](../assets/media/a-world-in-data/outlier.png)
+![CUF Trash](../assets/media/a-world-in-data/CUF-trash.png)
 
 ### Finding 4: Looking at the Red
 
 The heatmap view is very helpful for drawing conclusions based on the density of service requests, especially because it can be hard to see how many requests there are on the map when viewing them all at once - they sit on top of each other and the map becomes a mess of colored nodes. But the heatmap shows color based on the density of requests. Glancing at the heatmap, I see the darker red/orange areas in CUF (already discussed above), Price Hill, Over-the-Rhine, Bond Hill, and Avondale. Most of these areas are known for being poorly taken care of in parts, and could benefit from increased focus from the city.
+
+![Concentrations on the Heatmap](../assets/media/a-world-in-data/heatmap.png)
 
 ## Technical Implementation
 
