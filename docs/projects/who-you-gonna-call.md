@@ -84,7 +84,7 @@ The dashboard application contains seven different visualizations: the map view,
 
 **What it shows:** The distribution of number of service requests by neighborhood, request submission methods (Internet, 311 Call, etc.), number of service requests by public agency, service requests by priority level, and requests by service type (Trash, Tires, Graffiti, Dumping, Littering, and Vacant).
 
-**Interactions:** Users can hover over a bin to temporarily highlight all data contained in that bin in all seven visualizations. Clicking a bin persists this focus, allowing users to isolate specific range groups.
+**Interactions:** Users can hover over a bin to temporarily highlight all data contained in that bin in all seven visualizations. Clicking a bin persists this focus, allowing users to isolate specific range groups. Each bar graph also has a drop down menu allowing the user to select how the y axis is distributed (linear, log, square root).
 
 ![Selecting a Bin from the Bar Chart](../assets/media/who-you-gonna-call/interactions.png)
 
@@ -101,11 +101,83 @@ The dashboard application contains seven different visualizations: the map view,
 
 ## Key Discoveries & Findings
 
-TODO
+The following case studies demonstrate how the dashboard’s interactive features can be leveraged to uncover trends, draw comparisons, and find outliers.
+
+### Finding 1: Graffiti
+
+By selecting the Graffiti bar chart, there are a couple of neighborhoods that can be seen that struggle with consistent grafitti: Northside, CUF, the West End, the East End, and Over-the-Rhine. The graffiti nodes are very densely packed in these areas and sparse everywhere else. Understandably, brushing over the timeline during the warmer months vs the colder months shows us that the vast majority of graffiti service requests come during May-October. This information would give the City of Cincinnati times and locations to focus on.
+
+![Summer Graffiti Hotspots](../assets/media/who-you-gonna-call/graffiti-hotspots.png)
+
+### Finding 2: Modern Technology
+
+Now more than ever, modern technology is giving us new ways to approach and solve problems. A quick glance at the request submission methods bar graph shows that the vast majority of request submissions come from the internet (I assume this means a website) rather than the traditional 311 call, which sits in a distant second place. 
+
+Looking at how these are distrubuted on the map, more urban areas specifically, like downtown, are relying more on the internet, with almost no 311 calls coming from this part of Cincinnati. More people, especially in the city, are relying more on the internet to submit requests, and the Cincinnati government website seems very user-friendly, easy to understand, and well built. They even have a mobile app! I think they should advertise this more, and continue leaning into the use of technology like this, especially because this is the first I've heard of online 311 submissions.
+
+![Zimbabwe Over Time](../assets/media/a-world-in-data/zimbabwe_over_time.png)
+
+### Finding 3: The Trash Problem in CUF
+
+There are a lot of requests on the map, and things get quite tightly packed, especially just south-west of the University of Cincinnati in CUF. In fact, there is a very large clump of light blue, trash service requests, in the residential areas where a lot of UC upperclassmen live. Most of these are improper trash set-out requests. The timeline shows that these requests are super concentrated in July and August, right around the time that move-in and move-out happens for the new academic year. I think these might be related, and could be helpful information for the City of Cincinnati to know to find ways to deal with this end of summer trash problem.
+
+![The Outlier, Nauru](../assets/media/a-world-in-data/outlier.png)
+
+### Finding 4: Looking at the Red
+
+The heatmap view is very helpful for drawing conclusions based on the density of service requests, especially because it can be hard to see how many requests there are on the map when viewing them all at once - they sit on top of each other and the map becomes a mess of colored nodes. But the heatmap shows color based on the density of requests. Glancing at the heatmap, I see the darker red/orange areas in CUF (already discussed above), Price Hill, Over-the-Rhine, Bond Hill, and Avondale. Most of these areas are known for being poorly taken care of in parts, and could benefit from increased focus from the city.
 
 ## Technical Implementation
 
-TODO
+### Tech Stack
+
+#### Python (Data Exploration)
+
+**Tools & Packages:** [`Pandas`](https://pandas.pydata.org/docs/)
+
+Python was used for the data pipeline primarily due to `Pandas`' ability to easily read and edit CSV data.
+
+#### JavaScript, HTML, CSS (Frontend)
+
+**Packages:** [`D3.js`](https://d3js.org/), [`Leaflet`](https://leafletjs.com/)
+
+`D3.js` was selected for its powerful capabilities in creating data visualizations. Using the basic frontend setup with D3 offered parity with what was taught in class and provided examples and allowed for granular control over the visualizations.
+
+`Leaflet` was used to provide the foundation for our interactive map. We used the in-class example on Leaflet maps to start building our own, adding in the different options, views, and interactions throughout the project.
+
+### Architecture
+
+#### `data/` (Data Files and Exploration)
+
+Contains the CSV files, some Python scripts used to manipulate the data and pick out the unique neighborhoods, departments, priority levels, and service types, as well as the output of those scripts. 
+
+#### `js/` (JavaScript)
+
+Contains class-based visualizations modules (`LeafletMap`, `BarChart`, and `Timeline`). Also contains common functions and event handlers used to allow interactions (hovering, clicking, and brushing) and synchronization of those interactions between visualizations.
+
+#### `css/` (CSS)
+
+Contains the style sheet files for styling our application.
+
+
+### Running Locally
+
+To run this locally:
+
+1. Clone the repository and navigate to the directory
+
+    ```bash
+    git clone https://github.com/MatthewGoldsberry/Who-you-gonna-call.git
+    cd Who-you-gonna-call
+    ```
+
+2. Launch a local web server (We used Python to do this)
+
+    ```bash
+    python -m http.server
+    ```
+
+3. Access the application at [`http://localhost:8000`](http://localhost:8000)
 
 ## Challenges & Future Work
 
