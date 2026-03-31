@@ -137,4 +137,20 @@ TODO
 
 ## Team Contributions
 
-TODO
+### Matthew Goldsberry
+
+* Developed the Python data cleaning pipeline to process the data subset
+* Implemented the Leaflet map and custom controls (service type filtering, color by attribute, and map backgrounds)
+* Created the bar charts and the dynamic chart-swapping UI layout
+* Handled state management for cross-component linked interactions and selection removal
+
+### Isaac Dowdy
+
+* Created the interactive timeline visualization
+* Implemented the geospatial heatmap layer
+* Developed the brushing interactions for both the timeline and the Leaflet map
+
+### Joint Efforts
+
+* Initial project planning and conceptualization
+* UI/UX design and dashboard layout decisions
