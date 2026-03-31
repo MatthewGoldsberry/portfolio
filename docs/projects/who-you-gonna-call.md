@@ -10,7 +10,7 @@
 
 This project is an interactive data visualization designed to help users explore and understand patterns in 311 service requests made to the City of Cincinnati in 2025, with a focus on issues related to visual disorder.
 
-* **The Problem:** The data for this project was presented in one large CSV file with many attributes and data points, an accurate example of how data looks in the world. Data like this cannot be easily visualized through tables or in a static report, and, without effective visualizations and linked views of the data, it can be challenging to identify trends and draw comparisons from the data. 
+* **The Problem:** The data for this project was presented in one large CSV file with many attributes and data points, an accurate example of how data looks in the world. Data like this cannot be easily visualized through tables or in a static report, and, without effective visualizations and linked views of the data, it can be challenging to identify trends and draw comparisons from the data.
 * **The Goal:** This application allows users to explore Cincinnati's 311 service request data through a synchronized dashboard containing a map and different charts. By interacting with the linked views, users can isolate specific neighborhoods, time periods, or request types and observe how patterns and trends change across the city. This application would not only be helpful in gaining information on visual disorder in Cincinnati, but also in coming up with creative ways to approach and solve these problems.
 
 ## Video Demonstration
@@ -24,7 +24,28 @@ This project is an interactive data visualization designed to help users explore
 
 ## The Data
 
-TODO
+The datasource of this project is the [Cincinnati 311 Non-Emergency Service Requests dataset](https://data.cincinnati-oh.gov/efficient-service-delivery/Cincinnati-311-Non-Emergency-Service-Requests/gcej-gmiw/about_data), sourced directly from the City of Cincinnati's Open Data Portal.
+
+The 3-1-1 system handles every non-emergency request in the city, meaning the raw dataset was massive and broad in scope. It contained over 381 distinct service request types (`SR_TYPE`) spanning 17 different departments. To align with the focus of our project, **Visual Disorder**, this data needed to be filtered and cleaned into a focused subset.
+
+### Filtering for Visual Disorder
+
+Visual disorder can be more broadly defined as instances of visual blight and environment disorder. This required narrowing down those 381 different service types into 6 core, human-readable categories: **Dumping, Graffiti, Littering, Tires, Trash, and Vacant Properties**.
+
+To achieve this, we aggregated several related raw service codes into consolidated categories:
+
+* **Graffiti:** Combined `GRFITI`, `GRFITI-H`, `GRAFPARK`, and `GRFTRPRV`.
+* **Littering:** Combined `LTTR-BLD`, `LTTR-CDV`, `LTTR-PRK`, `LTTR-REC`, and `LTTRRST`.
+* **Trash:** Combined `TRASH-E`, `TRASH-I`, `TRASH-L`, and `TRASH-RE`.
+* **Dumping:** Mapped from `DUMP-PVS`.
+* *(Tires and Vacant properties were mapped directly from their respective individual codes).*
+
+### Data Processing & Subsetting
+
+To extract these insights and generate our final dataset used in the application, we develop two basic Python scripts.
+
+1. **Data Exploration** ([`data/data_exploration.py`](https://github.com/MatthewGoldsberry/Who-you-gonna-call/blob/main/data/data_exploration.py)): Because the dataset was so large to start with, we wrote a basic script using Python's native `csv` library to parse the file and extract sets of values for priorities, departments, neighborhoods, and service types. This allowed us to see exactly what we were working with in those specific categories.
+2. **Subsetting & Normalization** ([`data/subset_creation.py`](https://github.com/MatthewGoldsberry/Who-you-gonna-call/blob/main/data/subset_creation.py)): Once we identified the target codes, we leveraged the `pandas` library to clean and filter the data. Specifically, we filtered down the original dataset to only include the service types we wanted to target. Then we normalizes the service types in consolidated groups with human-readable labels.
 
 ## Design Process & Early Sketches
 
@@ -97,7 +118,6 @@ The dashboard application contains seven different visualizations: the map view,
 **Interactions:** Supports hovering and click-to-select different weeks, highlighting this data in the other visualizations. The timeline also includes a brush, using the same scale as the timeline but referencing the non-binned data to allow users to brush over days rather than weeks. On a brush, the other visualizations highlight the selected data and a helpful tooltip appears beneath the timeline to show the range of dates selected.
 
 ![Timeline Brush](../assets/media/who-you-gonna-call/july-graffiti.png)
-
 
 ## Key Discoveries & Findings
 
