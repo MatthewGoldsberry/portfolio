@@ -8,7 +8,10 @@
 
 ## Project Overview & Motivations
 
-TODO
+This project is an interactive data visualization designed to help users explore and understand patterns in 311 service requests made to the City of Cincinnati in 2025, with a focus on issues related to visual disorder.
+
+* **The Problem:** The data for this project was presented in one large CSV file with many attributes and data points, an accurate example of how data looks in the world. Data like this cannot be easily visualized through tables or in a static report, and, without effective visualizations and linked views of the data, it can be challenging to identify trends and draw comparisons from the data. 
+* **The Goal:** This application allows users to explore Cincinnati's 311 service request data through a synchronized dashboard containing a map and different charts. By interacting with the linked views, users can isolate specific neighborhoods, time periods, or request types and observe how patterns and trends change across the city. This application would not only be helpful in gaining information on visual disorder in Cincinnati, but also in coming up with creative ways to approach and solve these problems.
 
 ## Video Demonstration
 
@@ -60,7 +63,41 @@ We also noted during this sketching phase that the bar charts in the right colum
 
 ## Visual Components & Interactions
 
-TODO
+![Full Dashboard](../assets/media/who-you-gonna-call/app.png)
+
+The dashboard application contains seven different visualizations: the map view, five bar graphs, and a timeline. The map shows the City of Cincinnati with the service requests geographically visualized. The five bar graphs show number of service requests by neighborhood, request submission methods (Internet, 311 Call, etc.), number of service requests by public agency, service requests by priority level, and requests by service type (Trash, Tires, Graffiti, Dumping, Littering, and Vacant). View an image of the full dashboard application above.
+
+### The Leaflet Map
+
+![The Leaflet Map](../assets/media/who-you-gonna-call/map.png)
+
+**What this shows:** Map of the City of Cincinnati with the service requests geographically visualized.
+
+**Interactions:** Users can hover over a point on the map for a tooltip that shows the request type, description, agency, and timing information. The map includes various modes to change the color of the nodes, the map background, a heatmap mode, and a brush mode. The brush allows the user to select a subset of nodes, with the other visualizations updating to show the selected data. The Heatmap shows the same data visualized on the map in a different way, so it also works with the brushing and the linked interactions from the other graphs.
+
+![Brushing on Map](../assets/media/who-you-gonna-call/UC-311.png)
+![Brushing on Heatmap](../assets/media/who-you-gonna-call/UC-311-heatmap.png)
+
+### Bar Chart
+
+![Bar Charts](../assets/media/who-you-gonna-call/barcharts.png)
+
+**What it shows:** The distribution of number of service requests by neighborhood, request submission methods (Internet, 311 Call, etc.), number of service requests by public agency, service requests by priority level, and requests by service type (Trash, Tires, Graffiti, Dumping, Littering, and Vacant).
+
+**Interactions:** Users can hover over a bin to temporarily highlight all data contained in that bin in all seven visualizations. Clicking a bin persists this focus, allowing users to isolate specific range groups.
+
+![Selecting a Bin from the Bar Chart](../assets/media/who-you-gonna-call/interactions.png)
+
+### Timeline
+
+![Timeline](../assets/media/who-you-gonna-call/timeline.png)
+
+**What it shows:** A timeline of service requests binned by week.
+
+**Interactions:** Supports hovering and click-to-select different weeks, highlighting this data in the other visualizations. The timeline also includes a brush, using the same scale as the timeline but referencing the non-binned data to allow users to brush over days rather than weeks. On a brush, the other visualizations highlight the selected data and a helpful tooltip appears beneath the timeline to show the range of dates selected.
+
+![Timeline Brush](../assets/media/who-you-gonna-call/july-graffiti.png)
+
 
 ## Key Discoveries & Findings
 
