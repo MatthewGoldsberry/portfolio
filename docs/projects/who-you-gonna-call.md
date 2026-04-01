@@ -94,7 +94,7 @@ The dashboard application contains seven different visualizations: the map view,
 
 **What this shows:** Map of the City of Cincinnati with the service requests geographically visualized.
 
-**Interactions:** Users can hover over a point on the map for a tooltip that shows the request type, description, agency, and timing information as well as highlight that data in the other visualizations. Clicking on one of these points will persist the selection and highlight the other visualizations even as the user's cursor moves away from that point. The map includes various modes to change the color of the nodes, the map background, a heatmap mode, and a brush mode. The brush allows the user to select a subset of nodes, with the other visualizations updating to show the selected data. The Heatmap shows the same data visualized on the map in a different way, so it also works with the brushing and the linked interactions from the other graphs.
+**Interactions:** Users can hover over a point on the map for a tooltip that shows the request type, description, agency, and timing information as well as highlight that data in the other visualizations. Clicking on one of these points will persist the selection and highlight the other visualizations even as the user's cursor moves away from that point. The map includes various options to change the color of the nodes, the map background, which service types are shown and their colors, a heatmap mode, and a brush mode. The brush allows the user to select a subset of nodes, with the other visualizations updating to show the selected data. The Heatmap shows the same data visualized on the map in a different way, so it also works with the brushing and the linked interactions from the other graphs.
 
 ![Brushing on Map](../assets/media/who-you-gonna-call/UC-311.png)
 ![Brushing on Heatmap](../assets/media/who-you-gonna-call/UC-311-heatmap.png)
@@ -105,7 +105,7 @@ The dashboard application contains seven different visualizations: the map view,
 
 **What it shows:** The distribution of number of service requests by neighborhood, request submission methods (Internet, 311 Call, etc.), number of service requests by public agency, service requests by priority level, and requests by service type (Trash, Tires, Graffiti, Dumping, Littering, and Vacant).
 
-**Interactions:** Users can hover over a bin to temporarily highlight all data contained in that bin in all seven visualizations. Clicking a bin persists this focus, allowing users to isolate specific range groups. Each bar graph also has a drop down menu allowing the user to select how the y axis is distributed (linear, log, square root).
+**Interactions:** Users can hover over a bin to show a tooltip and temporarily highlight all data contained in that bin in all seven visualizations. Clicking a bin persists this focus, allowing users to isolate specific range groups. Each bar graph also has a drop down menu allowing the user to select how the y axis is distributed (linear, log, square root). The bar graphs also have a button in the top left of their windows that switches their view to the map's default position to allow the user to see a bigger picture.
 
 ![Selecting a Bin from the Bar Chart](../assets/media/who-you-gonna-call/interactions.png)
 
@@ -115,9 +115,13 @@ The dashboard application contains seven different visualizations: the map view,
 
 **What it shows:** A timeline of service requests binned by week.
 
-**Interactions:** Supports hovering and click-to-select different weeks, highlighting this data in the other visualizations. The timeline also includes a brush, using the same scale as the timeline but referencing the non-binned data to allow users to brush over days rather than weeks. On a brush, the other visualizations highlight the selected data and a helpful tooltip appears beneath the timeline to show the range of dates selected.
+**Interactions:** Supports hovering to show a tooltip and click-to-select different weeks, highlighting this data in the other visualizations. The timeline also includes a brush, using the same scale as the timeline but referencing the non-binned data to allow users to brush over days rather than weeks. On a brush, the other visualizations highlight the selected data and a helpful tooltip appears beneath the timeline to show the range of dates selected.
 
 ![Timeline Brush](../assets/media/who-you-gonna-call/july-graffiti.png)
+
+### The Rest Selection Button
+
+On any selection, a button appears at the top of the screen, allowing the user to clear any selection they have made. The same functionality is tied to the ESC key.
 
 ## Key Discoveries & Findings
 
