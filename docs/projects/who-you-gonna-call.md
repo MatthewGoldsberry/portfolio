@@ -82,6 +82,46 @@ This was validated during implementation as once the map controls were added, th
 
 We also noted during this sketching phase that the bar charts in the right column would be relatively small. To solve this in the final build, we introduced a chart-swapping feature that lets users move any bar chart into the large central map space for enhanced viewing.
 
+### Color Design Architecture
+
+Designing the color architecture of this project required considering several core color theory principles to ensure that the visualizations remained analytically useful and easy. Due to the nature of the dataset and their being multiple distinct variables simultaneously, the color mapping had to be intentionally constructed which is laid out in detail here.
+
+But first let's highlight the two main environmental challenges that shaped the architecture:
+
+1. **Base Map Saturation:** The default map background contains a significant amount of color, meaning our overlaid data marks required high contrast and saturation to remain visible on this.
+2. **High Cardinality:** Representing 50 unique neighborhoods required creating a color palette that extends beyond the standard 6-8 colors typically recommended.
+
+To resolve the second issue without sacrificing the distinguishability, we edited a pretty well documented and accessible 20-color palette (originally designed by [Sasha Trubetshoy](https://sashamaps.net/docs/resources/20-colors/)). There were some colors in this palette that did not fit our needs, for example, white and black, we manually refined the 20 colors down to 17 distinct colors to serve as our foundational categorical palette.
+
+The timeline chart and bar charts representing the data types not select are set to the standard steelblue to not specifically place the color focus on the datatype selected and prevent potential confusion from the same colors meaning different things in the different bar charts.
+
+Now lets look at the color encoding strategy for each data variable:
+
+* **Service Type**
+    * **Data Type:** Nominal; Categorical
+    * **Color Scheme:** Categorical
+    * **Justification:** The service types represent discrete, unordered categories so we applied a hand-selected subset of our 17-color palette. The specific colors were chose for maximum visual contrast against the map and each other to help users to differentiate between service types at a glance
+
+* **Neighborhood**
+    * **Data Type:** Nominal; Spatial
+    * **Color Scheme:** Categorical
+    * **Justification:** Neighborhoods are distinct, unordered geographic regions. For this we utilize the full 17-color custom palette to differentiate them. To ensure clarity in the visualization, we manually checked and ensured that no neighboring neighborhoods shared colors, helping to create distinct cluster boundaries.
+
+* **Public Agency**
+    * **Data Type:** Nominal; Categorical
+    * **Color Scheme:** Categorical
+    * **Justification:** These are similar to service types, in the aspect that they are discrete and unordered. We utilized a custom categorical subset of contrasting colors to differentiate the agencies.
+
+* **Priority Level**
+    * **Data Type:** Ordinal
+    * **Color Scheme:** Sequential; Semantic
+    * **Justification:** Priority levels represent ordered categories to a hierarchy of severity. To visualize this we used a semantic, multi-colored sequential scale: Gray (Standard) --> Yellow (Priority) --> Orange (Hazardous) --> Red (Emergency). The goal of this color chose was to be consistent with associations to danger, helping the user grasp severity just but looking at a point.
+
+* **Time to Update**
+    * **Data Type:** Quantitative
+    * **Color Scheme:** Sequential
+    * **Justification:** To represent the continuous numeric values of time to resolve, we implemented a sequential scale mapped to an inverted Red-Yellow-Green interpolator. We map this scale sequentially from zero to our 95th percentile cap allows us to leverage the strong semantic associations of the colors (green for rapid resolutions, transitioning smoothly to red for severe delays) while treating the increase in time as a strictly linear progression.
+
 ## Visual Components & Interactions
 
 ![Full Dashboard](../assets/media/who-you-gonna-call/app.png)
