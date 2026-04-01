@@ -206,11 +206,24 @@ To run this locally:
 
 ## Challenges & Future Work
 
+### Challenges
+
 One new challenge presented by this project compared to the Our World in Data project was the group component. While working on a team was super helpful in managing the full workload of the project, it added the new element of collaboration. We had to work together on coding conventions, project organization, and workflows. We also had to put forth effort to make high-level decisions and stay communicative.
 
-Technically, one challenge we faced was in the development of the brush functionality for both the Leaflet map and the Timeline. Not only did the d3 brush present a lot of bugs that needed to be ironed out, but it also introduced lots of performance issues. These performance issues arose because every time a brush was made, it checked the bounds against every other point on the map to see what data fell inside or outside the brush. From there, it highlighted all the selections and dimmed everything that wasn't selected on the map. Especially with a large subset of the data, the performance hit was too large. We had to change some of the logic surrounding dimming points so that we weren't redrawing every single point on a selection event as well as find a smaller subset of data to not overwhelm the application with too many points.
+A challenge we faced was in the development of the brush functionality for both the Leaflet map and the Timeline. Not only did the d3 brush present a lot of bugs that needed to be ironed out, but it also introduced lots of performance issues. These performance issues arose because every time a brush was made, it checked the bounds against every other point on the map to see what data fell inside or outside the brush. From there, it highlighted all the selections and dimmed everything that wasn't selected on the map. Especially with a large subset of the data, the performance hit was too large. We had to change some of the logic surrounding dimming points so that we weren't redrawing every single point on a selection event as well as find a smaller subset of data to not overwhelm the application with too many points.
 
 Additionally, when used at the same time, the timeline brush and the map brush caused similar performance troubles. We were unfortunately unable to quickly fix this and chose to only allow the user to use one brush at a time.
+
+We also encountered unexpected performance problems early in development caused by rendering transitions. After spending time profiling and optimizing the codebase, we discovered that applying transitions to a large volume of Leaflet map points was severely hindering browser rendering. Removing these specific transition effects immediately resolved the latency and restored smooth interactivity.
+
+Implementing the view-swapping mechanism also presented technical challenge. This feature relied on DOM manipulation, pretty much isolated form the D3 ecosystem, requiring the construction of a custom event handler at the document level. On top of that the layout state also had to be managed effectively to ensure that charts when back to their original homes after swapping. This proved to be an interesting problem that provided good learning opportunities.
+
+### Future Work
+
+* **Tooltip Problem Resolution:** There are still some lingering minor edge cases were rapid user interactions can cause tooltips to hit what seem to be race conditions where they persist longer than intended.
+* **High-Volume Data Rendering:** This is a future work direction that I think would be a great learning experience. This would entail some level of exploration of advanced rendering techniques to be able to support the full, unreduced dataset without compromising performance. This is future work that is labeled with more priority due to the valuable lessons it can teach us.
+* **Concurrent Brushing Optimization:** As mentioned in the challenges, we ran into a problem with the performance of using both the timeline and map brush at the same time. Bad enough that we had to completely disable being able to do both at the same time to maintain effective usability. To fix this would likely require some level of re-architecting the filtering logic to support simultaneous brushing.
+* **Temporal Animation:** Another cool feature that we ran out of time to get a implementation in for was an animation control system to play and progress data across the timeline. While the users can still mimic this behavior with the brushing this is something that would be a nice quality of life feature for the user.
 
 ## Acknowledgements & AI Usage
 
@@ -243,3 +256,4 @@ I did use AI throughout the course of this project. I used GitHub copilot throug
 
 * Initial project planning and conceptualization
 * UI/UX design and dashboard layout decisions
+* Documentation
