@@ -276,11 +276,11 @@ We would like to extend our appreciation to Dr. Aurisano for providing valuable 
 
 ### Matthew Goldsberry
 
-During this project, I utilized Claude Code as a development tool to help streamline my workflow. I mainly leveraged this for targeted debugging and helping resolve specific implementation details when I would get stuck. Through leveraging this tool I was able to more effectively overcome roadblocks I encountered and maintain momentum in the development. I did not receive any non-AI help from outside this team or Dr. Aurisano during the project.
+During this project, I utilized Claude Code as a development tool to help streamline my workflow. I mainly leveraged this for targeted debugging and helping resolve specific implementation details when I would get stuck. Through leveraging this tool I was able to more effectively overcome roadblocks I encountered and maintain momentum in the development. I did not receive any non-AI help from outside this team during the project.
 
 ### Isaac Dowdy
 
-I did use AI throughout the course of this project. I used GitHub copilot through Visual Studio Code to give line edit suggestions and AI autocomplete to speed up the coding process. This feature was very good at guessing what I wanted to type next based on what I had already typed and saved a lot of time. I also used copilot's chat feature to diagnose some of the bugs I faced, get suggestions on performance improvements, and find syntax errors. I did not receive any non-AI help from outside this team or Dr. Aurisano during the project.
+I did use AI throughout the course of this project. I used GitHub copilot through Visual Studio Code to give line edit suggestions and AI autocomplete to speed up the coding process. This feature was very good at guessing what I wanted to type next based on what I had already typed and saved a lot of time. I also used copilot's chat feature to diagnose some of the bugs I faced, get suggestions on performance improvements, and find syntax errors. I did not receive any non-AI help from outside this team during the project.
 
 ## Team Contributions
 
