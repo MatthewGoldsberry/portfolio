@@ -202,7 +202,7 @@ To run this locally:
 
 ## Challenges & Future Work
 
-One new challenge presented by this projecct compared to the Our World in Data project was the group component. While working on a team was super helpful in managing the full workload of the project, it added the new element of collaboration. We had to work together on coding conventions, project organization, and workflows. We also had to put forth effort to make high-level decisions and stay communicative.
+One new challenge presented by this project compared to the Our World in Data project was the group component. While working on a team was super helpful in managing the full workload of the project, it added the new element of collaboration. We had to work together on coding conventions, project organization, and workflows. We also had to put forth effort to make high-level decisions and stay communicative.
 
 Technically, one challenge we faced was in the development of the brush functionality for both the Leaflet map and the Timeline. Not only did the d3 brush present a lot of bugs that needed to be ironed out, but it also introduced lots of performance issues. These performance issues arose because every time a brush was made, it checked the bounds against every other point on the map to see what data fell inside or outside the brush. From there, it highlighted all the selections and dimmed everything that wasn't selected on the map. Especially with a large subset of the data, the performance hit was too large. We had to change some of the logic surrounding dimming points so that we weren't redrawing every single point on a selection event as well as find a smaller subset of data to not overwhelm the application with too many points.
 
@@ -210,11 +210,15 @@ Additionally, when used at the same time, the timeline brush and the map brush c
 
 ## Acknowledgements & AI Usage
 
+We would like to extend our appreciation to Dr. Aurisano for providing valuable feedback and guidance on some visualization best-practice questions we had.
+
 ### Matthew Goldsberry
+
+During this project, I utilized Claude Code as a development tool to help streamline my workflow. I mainly leveraged this for targeted debugging and helping resolve specific implementation details when I would get stuck. Through leveraging this tool I was able to more effectively overcome roadblocks I encountered and maintain momentum in the development. I did not receive any non-AI help from outside this team or Dr. Aurisano during the project.
 
 ### Isaac Dowdy
 
-I did use AI throughout the course of this project. I used GitHub copilot through Visual Studio Code to give line edit suggestions and AI autocomplete to speed up the coding process. This feature was very good at guessing what I wanted to type next based on what I had already typed and saved a lot of time. I also used copilot's chat feature to diagnose some of the bugs I faced, get suggestions on performance improvements, and find syntax errors. I did not receive any non-AI help from outside this team during the project. 
+I did use AI throughout the course of this project. I used GitHub copilot through Visual Studio Code to give line edit suggestions and AI autocomplete to speed up the coding process. This feature was very good at guessing what I wanted to type next based on what I had already typed and saved a lot of time. I also used copilot's chat feature to diagnose some of the bugs I faced, get suggestions on performance improvements, and find syntax errors. I did not receive any non-AI help from outside this team or Dr. Aurisano during the project.
 
 ## Team Contributions
 
