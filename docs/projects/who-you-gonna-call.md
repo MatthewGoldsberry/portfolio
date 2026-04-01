@@ -134,21 +134,24 @@ The dashboard application contains seven different visualizations: the map view,
 
 **What this shows:** Map of the City of Cincinnati with the service requests geographically visualized.
 
-**Interactions:** Users can hover over a point on the map for a tooltip that shows the request type, description, agency, and timing information as well as highlight that data in the other visualizations. Clicking on one of these points will persist the selection and highlight the other visualizations even as the user's cursor moves away from that point. The map includes various options to change the color of the nodes, the map background, which service types are shown and their colors, a heatmap mode, and a brush mode. The brush allows the user to select a subset of nodes, with the other visualizations updating to show the selected data. The Heatmap shows the same data visualized on the map in a different way, so it also works with the brushing and the linked interactions from the other graphs.
+**Interactions:** Users can hover over a point on the map for a tooltip that shows the request type, description, agency, and timing information as well as highlight that data in the other visualizations (as seen in first image below). Clicking on one of these points will persist the selection and highlight the other visualizations even as the user's cursor moves away from that point. The map includes various options to change the color of the nodes, the map background, which service types are shown and their colors (as seen in second image below), a heatmap mode, and a brush mode. The brush allows the user to select a subset of nodes, with the other visualizations updating to show the selected data. The Heatmap shows the same data visualized on the map in a different way, so it also works with the brushing and the linked interactions from the other graphs. (as seen in the last two images below)
 
-![Brushing on Map](../assets/media/who-you-gonna-call/UC-311.png)
-![Brushing on Heatmap](../assets/media/who-you-gonna-call/UC-311-heatmap.png)
+![Tooltip on Hover](../assets/media/who-you-gonna-call/leaflet-node-tooltip.png)
+![Service Type Color/Selection Edits](../assets/media/who-you-gonna-call/service-type-editing.png)
+![Brushing on Map](../assets/media/who-you-gonna-call/map-brushing.png)
+![Brushing on Heatmap](../assets/media/who-you-gonna-call/heatmap-brushed.png)
 
-### Bar Chart
+### Bar Charts
 
 ![Bar Charts](../assets/media/who-you-gonna-call/barcharts.png)
 
 **What it shows:** The distribution of number of service requests by neighborhood, request submission methods (Internet, 311 Call, etc.), number of service requests by public agency, service requests by priority level, and requests by service type (Trash, Tires, Graffiti, Dumping, Littering, and Vacant).
 
-**Interactions:** Users can hover over a bin to show a tooltip and temporarily highlight all data contained in that bin in all seven visualizations (shown in the first picture below). Clicking a bin persists this focus, allowing users to isolate specific range groups. The second image below shows an example of this, filtering down to all the Trash and Dumping requests made by 311 call in Price Hill. Each bar graph also has a drop down menu allowing the user to select how the y axis is distributed (linear, log, square root). The bar graphs also have a button in the top left of their windows that switches their view to the map's default position to allow the user to see a bigger picture. 
+**Interactions:** Users can hover over a bin to show a tooltip and temporarily highlight all data contained in that bin in all seven visualizations (shown in the first picture below). Clicking a bin persists this focus, allowing users to isolate specific range groups. Similarly, you can also deselect specific bins to refine the focus. The second image below shows an example of this, filtering down to all the Trash and Dumping requests made by 311 call in Price Hill. Each bar graph also has a drop down menu allowing the user to select how the y axis is distributed (linear, log, square root). The bar graphs also have a button in the top left of their windows that switches their view to the map's default position to allow the user to see a bigger picture (as seen in the last image).
 
 ![Selecting a Bin from the Bar Chart](../assets/media/who-you-gonna-call/interactions.png)
 ![Selecting Multiple Bins](../assets/media/who-you-gonna-call/bar-chart-interactions.png)
+![Enlarged Bar Chart](../assets/media/who-you-gonna-call/enlarged-bar-chart.png)
 
 ### Timeline
 
@@ -160,7 +163,6 @@ The dashboard application contains seven different visualizations: the map view,
 
 ![Timeline Interactions](../assets/media/who-you-gonna-call/timeline-interactions.png)
 ![Timeline Brush](../assets/media/who-you-gonna-call/july-graffiti.png)
-
 
 ### The Reset Selection Button
 
