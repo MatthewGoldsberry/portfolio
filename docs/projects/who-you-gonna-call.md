@@ -17,7 +17,7 @@ This project is an interactive data visualization designed to help users explore
 
 <figure markdown="span">
   <video controls loop muted playsinline width="700">
-    <source src="" type="video/mp4"> 
+    <source src="https://github.com/MatthewGoldsberry/portfolio/releases/download/v0.0.2/WhoYouGonnaCall_VideoDemo.mp4" type="video/mp4"> 
     Your browser does not support the video tag.
   </video>
 </figure>
@@ -131,7 +131,7 @@ By selecting the Graffiti bar chart, there are a couple of neighborhoods that ca
 
 ### Finding 2: Modern Technology
 
-Now more than ever, modern technology is giving us new ways to approach and solve problems. A quick glance at the request submission methods bar graph shows that the vast majority of request submissions come from the internet (I assume this means a website) rather than the traditional 311 call, which sits in a distant second place. 
+Now more than ever, modern technology is giving us new ways to approach and solve problems. A quick glance at the request submission methods bar graph shows that the vast majority of request submissions come from the internet (I assume this means a website) rather than the traditional 311 call, which sits in a distant second place.
 
 Looking at how these are distrubuted on the map, more urban areas specifically, like downtown, are relying more on the internet, with almost no 311 calls coming from this part of Cincinnati. More people, especially in the city, are relying more on the internet to submit requests, and the Cincinnati government website seems very user-friendly, easy to understand, and well built. They even have a mobile app! I think they should advertise this more, and continue leaning into the use of technology like this, especially because this is the first I've heard of online 311 submissions.
 
@@ -171,7 +171,7 @@ Python was used for the data pipeline primarily due to `Pandas`' ability to easi
 
 #### `data/` (Data Files and Exploration)
 
-Contains the CSV files, some Python scripts used to manipulate the data and pick out the unique neighborhoods, departments, priority levels, and service types, as well as the output of those scripts. 
+Contains the CSV files, some Python scripts used to manipulate the data and pick out the unique neighborhoods, departments, priority levels, and service types, as well as the output of those scripts.
 
 #### `js/` (JavaScript)
 
@@ -180,7 +180,6 @@ Contains class-based visualizations modules (`LeafletMap`, `BarChart`, and `Time
 #### `css/` (CSS)
 
 Contains the style sheet files for styling our application.
-
 
 ### Running Locally
 
