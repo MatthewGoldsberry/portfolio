@@ -105,9 +105,10 @@ The dashboard application contains seven different visualizations: the map view,
 
 **What it shows:** The distribution of number of service requests by neighborhood, request submission methods (Internet, 311 Call, etc.), number of service requests by public agency, service requests by priority level, and requests by service type (Trash, Tires, Graffiti, Dumping, Littering, and Vacant).
 
-**Interactions:** Users can hover over a bin to show a tooltip and temporarily highlight all data contained in that bin in all seven visualizations. Clicking a bin persists this focus, allowing users to isolate specific range groups. Each bar graph also has a drop down menu allowing the user to select how the y axis is distributed (linear, log, square root). The bar graphs also have a button in the top left of their windows that switches their view to the map's default position to allow the user to see a bigger picture.
+**Interactions:** Users can hover over a bin to show a tooltip and temporarily highlight all data contained in that bin in all seven visualizations (shown in the first picture below). Clicking a bin persists this focus, allowing users to isolate specific range groups. The second image below shows an example of this, filtering down to all the Trash and Dumping requests made by 311 call in Price Hill. Each bar graph also has a drop down menu allowing the user to select how the y axis is distributed (linear, log, square root). The bar graphs also have a button in the top left of their windows that switches their view to the map's default position to allow the user to see a bigger picture. 
 
 ![Selecting a Bin from the Bar Chart](../assets/media/who-you-gonna-call/interactions.png)
+![Selecting Multiple Bins](../assets/media/who-you-gonna-call/bar-chart-interactions.png)
 
 ### Timeline
 
@@ -115,11 +116,13 @@ The dashboard application contains seven different visualizations: the map view,
 
 **What it shows:** A timeline of service requests binned by week.
 
-**Interactions:** Supports hovering to show a tooltip and click-to-select different weeks, highlighting this data in the other visualizations. The timeline also includes a brush, using the same scale as the timeline but referencing the non-binned data to allow users to brush over days rather than weeks. On a brush, the other visualizations highlight the selected data and a helpful tooltip appears beneath the timeline to show the range of dates selected.
+**Interactions:** Supports hovering to show a tooltip and click-to-select different weeks (shown in the first picture), highlighting this data in the other visualizations. The timeline also includes a brush (shown in the second picture), using the same scale as the timeline but referencing the non-binned data to allow users to brush over days rather than weeks. On a brush, the other visualizations highlight the selected data and a helpful tooltip appears beneath the timeline to show the range of dates selected.
 
+![Timeline Interactions](../assets/media/who-you-gonna-call/timeline-interactions.png)
 ![Timeline Brush](../assets/media/who-you-gonna-call/july-graffiti.png)
 
-### The Rest Selection Button
+
+### The Reset Selection Button
 
 On any selection, a button appears at the top of the screen, allowing the user to clear any selection they have made. The same functionality is tied to the ESC key.
 
