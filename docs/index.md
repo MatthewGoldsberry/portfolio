@@ -4,9 +4,9 @@
     <h1 style="margin-bottom: 0.25rem;">Matthew Goldsberry</h1>
     <p style="margin-top: 0; font-weight: bold;">B.S. & M.S. Computer Science, Class of 2027</p>
 
-    <p><strong>Thesis Focus:</strong> TBD</p>
+    <p><strong>Thesis:</strong></p>
 
-    <p>I’m passionate about building software, tackling challenging problems, and exploring new technologies. Recently, I’ve been developing Python packages for data conversion and development workflows—once turning a 20-hour process into just 6 seconds.</p>
+    <p>I build developer tools and data conversion packages for users and engineers tackling complex data. Recently, by applying a more efficient algorithm to a data conversion package, I improved its parsing speed from 20 hours to just 6 seconds. Looking forward, I am focused on how machines perceive and understand the visual world-spanning multimodal systems and computer vision, through my thesis, senior design and future projects.</p>
 
     <p><strong>Languages & Tools:</strong> Python, C/C++, Git, CI/CD, Docker</p>
 
