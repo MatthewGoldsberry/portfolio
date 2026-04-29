@@ -178,7 +178,20 @@ The info button at the bottom right of the application calls a pop-up on hover o
 
 ## Key Discoveries & Findings
 
-...
+### Different Narrative Lines
+
+One thing that the Lord of the Rings franchise accomplishes very well across the books and films is the intricate character development, especially for the nine members of the fellowship, and the multiple distinct subplots woven into one story. These different narrative lines and interactions between different characters is something that can be clearly seen when using this application. 
+
+![Paths](../assets/media/the-fellowship-of-the-script/paths.png)
+
+The paths feature is helpful to see which characters travel together and frequent the same areas on the map. For example, it shows the clear connections between Frodo and Sam, between Merry and Pippin, Pippin and Gandalf, as well as Legolas, Aragorn, and Gimli. In fact, these connections reflect the intricate subplots throuhgout these films: Sam and Frodo on their travel to Mount Doom in Gorgoroth, Merry and Pippin lost in Fangorn Forest, Legolas, Aragorn, and Gimli as they try to track down those two hobbits, Pippin and Gandalf at Gondor, and many more. 
+
+![Aragorn Chord](../assets/media/the-fellowship-of-the-script/aragorn-chord.png)
+![Sam & Frodo Chord](../assets/media/the-fellowship-of-the-script/sam-frodo-chord.png)
+
+The scene co-occurance chord graph is also very useful in drawing similar conclusions. In the Two Towers, Aragorn shares scnenes with almost entirely Gimli and Legolas. Frodo and Sam frequently show up together in the Two Towers and Return of the King. 
+
+These conclusions might seem obvious to anyone familiar with the story, but I bring it up to show that this application brings out the best of the Lord of the Rings in terms of its writing, dialogue, and story-telling. The dashboard allows the user to appreciate the story from new angles.
 
 ## Technical Implementation
 
@@ -186,7 +199,7 @@ The info button at the bottom right of the application calls a pop-up on hover o
 
 #### Python (Data Exploration)
 
-**Tools & Packages:** [`BeautifulSoup`](https://beautiful-soup-4.readthedocs.io/en/latest/), [`Requests`](https://requests.readthedocs.io/en/latest/), [Natural Language Toolkit (NLTK)](https://www.nltk.org/)
+**Tools & Packages:** [`BeautifulSoup`](https://beautiful-soup-4.readthedocs.io/en/latest/), [`Requests`](https://requests.readthedocs.io/en/latest/), [`Natural Language Toolkit (NLTK)`](https://www.nltk.org/)
 
 Python was used for the data pipeline primarily due to its ability to easily read and edit CSV data. The third party `Requests` library was used to interact with the online transcripts. `BeautifulSoup` and `NLTK` were used to process the language data.
 
