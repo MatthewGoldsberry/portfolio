@@ -60,7 +60,65 @@ For character colors, standard high-contrast categorical palettes felt too jarri
 
 ## Visual Components & Interactions
 
-...
+![Dashboard](../assets/media/the-fellowship-of-the-script/dashboard.png)
+
+### Middle Earth Map
+
+![Map](../assets/media/the-fellowship-of-the-script/map.png)
+
+**What this shows:** The locations of each member of the Fellowship (Aragorn, Boromir, Legolas, Gimli, Gandalf, Frodo, Sam, Merry, Pippin) in each scene where they have dialogue. Character locations are represented by colored letter icons distinct for each character and correlated to the color used for that character throughout the application. If enabled, the map also shows colored character paths for each scene leading up to the selected scene.
+
+**Interactions:** The user can hover over a character icon to view their specific path (enabled) in isolation to the rest. Clicking on one of these icons shows their information in the panel at the top left of the dashboard.
+
+![Icon Hover](../assets/media/the-fellowship-of-the-script/icon-hover.png)
+
+### Scene Controls
+
+![Scene Control](../assets/media/the-fellowship-of-the-script/scene-control.png)
+
+The scene control panel at the bottom of the application contains five different components: the scene slider, dropbox, play scene button, play film button, path toggle, and info button.
+
+#### Scene Slider
+
+**What this shows:** A line and point cursor with segments for each scene across each film to select specific scenes by location in the films.
+
+**Interactions:** The user can click and drag the point across the line to select different scenes. The selected scene will populate across the map and info panel. 
+
+#### Scene Dropbox
+
+**What this shows:** A dropbox to select specific scenes by title.
+
+**Interactions:** The user can click on the box to expand it, scroll through the list, and select a scene which will populate across the map, scene slider, and info panel.
+
+![Scene Dropbox](../assets/media/the-fellowship-of-the-script/scene-dropbox.png)
+
+#### Play Scene Button
+
+**What this shows:** A button in the scene control panel titled `Play Scene` that toggles to `Stop Scene` on click.
+
+**Interactions:** On click, this button calls a function that steps through the CSV data for the chosen scene, showing text boxes that appear above each character on the map. Clicking again will stop this process.
+
+![Play Scene](../assets/media/the-fellowship-of-the-script/play-scene.png)
+
+#### Play Film Button
+
+**What this shows:** A play button on the left side of the scene control panel. On click, it morphs into a pause button.
+
+**Interactions:** On click, this button steps through each scene starting at the chosen scene, displaying scene information and visualizing character locations on the map. Clicking again will stop this process.
+
+![Play Film](../assets/media/the-fellowship-of-the-script/play-film.png)
+
+#### Path Toggle
+
+On click, this button toggles between showing/hiding character paths on the map. Character paths appear the same color as their node color, consistent throughout the application, tracking the movement of each character throughout the scenes where they have dialogue. 
+
+![Paths](../assets/media/the-fellowship-of-the-script/paths.png)
+
+### Info Button
+
+The info button at the bottom right of the application calls a pop-up on hover or click to show information about the films, the data used in the project, and other acknowledgements.
+
+![Info](../assets/media/the-fellowship-of-the-script/info.png)
 
 ## Key Discoveries & Findings
 
