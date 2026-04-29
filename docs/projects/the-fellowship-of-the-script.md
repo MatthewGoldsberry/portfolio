@@ -30,7 +30,33 @@ A large part of this project was the data collection. Since we started with just
 
 ## Design Process & Early Sketches
 
-...
+At the start of the project, we established a requirement for ourselves: the map of Middle Earth should serve as the persistent backdrop for the entire application, with all other content layered on top. This constraint shaped nearly every design decision that followed.
+
+### Initial Concept
+
+With all the data that needed represented in the project, a deliberate strategy had to be designed to arrange everything spatially.To address this we decided to put as much as we could in the "dead spots" of the map, areas where the characters would not travel close to, and have information hidden behind expansion modules that have to be opened. Those would be the main locations for a lot of the more specific data visualizations.
+
+### Sketches
+
+With these constraints in mind, we developed two early sketches to explore potential spatial arrangements, focusing primarily on map zoom level.
+
+#### Approach 1: No Zoom
+
+![Approach 1 Sketch](../assets/media/the-fellowship-of-the-script/sketch1.png)
+
+#### Approach 2: More Zoom
+
+![Approach 2 Sketch](../assets/media/the-fellowship-of-the-script/sketch2.png)
+
+#### Decision and Validation
+
+We choose Approach 1. The zoomed-in view sacrificed too much of the map's visual impact and made it significantly harder to place UI elements without covering important geographic areas. The full-scale view preserved the aesthetic of the map while giving us more usable negative space for the interface.
+
+### Color Design
+
+Color design centered on one primary constraint: staying visually consistent with the aged tone of the map. This intent is reflected throughout the application's color palette.
+
+For character colors, standard high-contrast categorical palettes felt too jarring against the muted map tones. We developed a custom set that *loosely* matched colors associated with each character while naturally grouping the four hobbits within a shared color family. Colors used within the visualizations themselves are slightly more saturated than the character node colors to maintain legibility against the darker backdrop elements.
 
 ## Visual Components & Interactions
 
@@ -60,7 +86,7 @@ Python was used for the data pipeline primarily due to its ability to easily rea
 
 #### `data/`
 
-Contains the CSV files, a Python scripts used to scrape and process the data, as well as the images and font used for the frontend. 
+Contains the CSV files, a Python scripts used to scrape and process the data, as well as the images and font used for the frontend.
 
 #### `js/` (JavaScript)
 
