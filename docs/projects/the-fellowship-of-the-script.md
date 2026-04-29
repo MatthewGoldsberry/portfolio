@@ -82,7 +82,7 @@ The scene control panel at the bottom of the application contains five different
 
 **What this shows:** A line and point cursor with segments for each scene across each film to select specific scenes by location in the films.
 
-**Interactions:** The user can click and drag the point across the line to select different scenes. The selected scene will populate across the map and info panel. 
+**Interactions:** The user can click and drag the point across the line to select different scenes. The selected scene will populate across the map and info panel.
 
 #### Scene Dropbox
 
@@ -110,7 +110,7 @@ The scene control panel at the bottom of the application contains five different
 
 #### Path Toggle
 
-On click, this button toggles between showing/hiding character paths on the map. Character paths appear the same color as their node color, consistent throughout the application, tracking the movement of each character throughout the scenes where they have dialogue. 
+On click, this button toggles between showing/hiding character paths on the map. Character paths appear the same color as their node color, consistent throughout the application, tracking the movement of each character throughout the scenes where they have dialogue.
 
 ![Paths](../assets/media/the-fellowship-of-the-script/paths.png)
 
@@ -119,6 +119,62 @@ On click, this button toggles between showing/hiding character paths on the map.
 The info button at the bottom right of the application calls a pop-up on hover or click to show information about the films, the data used in the project, and other acknowledgements.
 
 ![Info](../assets/media/the-fellowship-of-the-script/info.png)
+
+### Scene Co-Occurrence
+
+**What this shows:** This shows the relationships between characters and their scene appearances with each other and throughout the movie.
+
+**Interactions:** On hover of arcs, the visualization will emphasize the interactions connected to the arc (ribbons), and a tooltip will show how many scenes the character had lines in. Clicking will persist this selection. On hover of ribbons, the tooltip will show the relationship of how many times characters shared scenes. The dropdown allows for filtering by movie.
+
+![Scene Co-Occurrence](../assets/media/the-fellowship-of-the-script/scene-co-occurrence.png)
+
+### Fellowship Lines
+
+**What this shows:** This shows the how many lines each of the characters in the fellowship spoke over the movies.
+
+**Interactions:** On hover, the visualization will emphasize the bar and display a tooltip. The dropdown allows for filtering by movie.
+
+![Fellowship Lines](../assets/media/the-fellowship-of-the-script/fellowship-lines.png)
+
+### Scene Info (Minimal View)
+
+**What this shows:** Basic scene dialogue stats.
+
+**Interactions:** Clicking expand button or text will open the [Scene Info (Expanded View)](#scene-info-expanded-view).
+
+![Scene Info (Minimal)](../assets/media/the-fellowship-of-the-script/scene-info-min.png)
+
+### Scene Info (Expanded View)
+
+**What this shows:** Advanced Scene dialogue stats. This includes the number of lines each character spoke and the full dialogue.
+
+**Interactions:** Clicking on the section titles or carets allow for the expansion / collapsing of those sub sections. On hover over the bars, the bar will be emphasized and a tooltip with information will appear.
+
+![Scene Info (Expanded)](../assets/media/the-fellowship-of-the-script/scene-info-expanded.png)
+
+### Fellowship Character Panel
+
+**What this shows:** All of the characters in the fellowship with their corresponding icons.
+
+**Interactions:** On click, selecting a character will trigger their specific info panel to appear in the top left.
+
+![Fellowship Character Panel](../assets/media/the-fellowship-of-the-script/fellowship-panel.png)
+
+### Character Info (Minimal View)
+
+**What this shows:** Basic character dialogue stats.
+
+**Interactions:** Clicking expand button or text will open the [Character Info (Expanded View)](#character-info-expanded-view).
+
+![Character Info (Minimal)](../assets/media/the-fellowship-of-the-script/character-info-min.png)
+
+### Character Info (Expanded View)
+
+**What this shows:** Advanced Scene dialogue stats. This includes the number of lines each character spoke and the full dialogue.
+
+**Interactions:** Clicking on the section titles or carets allow for the expansion / collapsing of those sub sections. On hover over the bars, heatmap bins, or words in the cloud, that point will be emphasis and a tooltip containing additional information will appear. Selecting the wiki page button will redirect to an external wiki page about the character. The `Top Words` visualization has three different modes of representing word occurrence, `Most Used`, `Most Frequent`, and `Most Unique`.
+
+![Character Info (Expanded)](../assets/media/the-fellowship-of-the-script/character-info-expanded.png)
 
 ## Key Discoveries & Findings
 
@@ -209,7 +265,7 @@ I did not receive any non-AI help from outside this team during the project.
 
 ### Isaac Dowdy
 
-I used GitHub Copilot line edits, autocomplete, and chat (mostly using claude sonnet 4.5) features to code more quickly, help brainstorm how to implement certain features, and find any loose ends or bugs across the workspace. AI was not only useful to speed up the work I did in this project, but also to allow this team to reach higher goals and achieve more deliverables than we could have without it. 
+I used GitHub Copilot line edits, autocomplete, and chat (mostly using claude sonnet 4.5) features to code more quickly, help brainstorm how to implement certain features, and find any loose ends or bugs across the workspace. AI was not only useful to speed up the work I did in this project, but also to allow this team to reach higher goals and achieve more deliverables than we could have without it.
 
 I did not receive any help from other peers or classmates outside of this team.
 
