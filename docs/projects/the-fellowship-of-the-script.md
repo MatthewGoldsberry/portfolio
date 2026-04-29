@@ -17,7 +17,7 @@
 
 <figure markdown="span">
   <video controls loop muted playsinline width="700">
-    <source src="" type="video/mp4"> 
+    <source src="https://github.com/MatthewGoldsberry/portfolio/releases/download/v0.0.3/The.Fellowship.of.the.Script.Demo.mp4" type="video/mp4"> 
     Your browser does not support the video tag.
   </video>
 </figure>
@@ -127,8 +127,13 @@ I did not receive any non-AI help from outside this team during the project.
 
 ### Isaac Dowdy
 
-* ...
+* Data scraping and parsing
+* Scene player
+* Scene Timeline
+* Map Visualization of characters
 
 ### Joint Efforts
 
-* ...
+* Initial project planning and conceptualization
+* UI/UX design and dashboard layout decisions
+* Documentation
