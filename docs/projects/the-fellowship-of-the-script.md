@@ -8,10 +8,10 @@
 
 ## Project Overview & Motivations
 
-...
+This project is focused on creating an interactive visualization to explore data from the Lord of the Rings Extended Edition films. 
 
-* **The Problem:** ...
-* **The Goal:** ...
+* **The Problem:** The data for this project was located on a fan-made website. Part of the challenge was to scrape and process this data, creating our own data files to work from. The project guidelines also allowed for a lot of creative freedom for this project, so it was up to this team to decide how to visualize and represent this data given a set of loose instructions.
+* **The Goal:** The goal of this application is to not only create a dashboard that is informative and allows the user to make conclusions about the dialogue from the Lord of the Rings films, but also to create an interesting, engaging experience that brings the user into the Lord of the Rings universe, driving curiosity, exploration, and appreciation of this fantastic work of literature and film.
 
 ## Video Demonstration
 
@@ -209,7 +209,9 @@ I did not receive any non-AI help from outside this team during the project.
 
 ### Isaac Dowdy
 
-...
+I used GitHub Copilot line edits, autocomplete, and chat (mostly using claude sonnet 4.5) features to code more quickly, help brainstorm how to implement certain features, and find any loose ends or bugs across the workspace. AI was not only useful to speed up the work I did in this project, but also to allow this team to reach higher goals and achieve more deliverables than we could have without it. 
+
+I did not receive any help from other peers or classmates outside of this team.
 
 ## Team Contributions
 
