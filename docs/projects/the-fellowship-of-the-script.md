@@ -24,7 +24,9 @@
 
 ## The Data
 
-...
+The datasource for this project was taken from this website: [Lord of the Rings Transcripts](https://www.tk421.net/lotr/film/), which includes each movie broken down with links for each scene (32 scenes per film). Each scene page includes all dialogue attributed to the speaking characters, alongside bracketed stage directions, scene locations, and various pictures from the films. The transcripts are taken from the three Extended Edition Lord of the Rings films. 
+
+A large part of this project was the data collection. Since we started with just a website, this process looked like developing python scripts to scrape, process, and organize this data into a CSV file - more information on the technical details of this process can be found below in the Technical Implementation section. Additionally, as part of this project we chose to visualize character locations on a map of Middle Earth. This presented another data collection hurdle: translating listed scene locations into coordinates on the map. In addition to the above website, this [Interactive Map of Middle Earth](http://lotrproject.com/map/#zoom=3&lat=-1319&lon=1500&layers=BTTTTT) proved useful in decoding some of the scene locations.
 
 ## Design Process & Early Sketches
 
@@ -44,21 +46,25 @@
 
 #### Python (Data Exploration)
 
-...
+**Tools & Packages:** [`BeautifulSoup`](https://beautiful-soup-4.readthedocs.io/en/latest/), [`Requests`](https://requests.readthedocs.io/en/latest/), [Natural Language Toolkit (NLTK)](https://www.nltk.org/)
+
+Python was used for the data pipeline primarily due to its ability to easily read and edit CSV data. The third party `Requests` library was used to interact with the online transcripts. `BeautifulSoup` and `NLTK` were used to process the language data.
 
 #### JavaScript, HTML, CSS (Frontend)
 
-...
+**Packages:** [`D3.js`](https://d3js.org/)
+
+`D3.js` was selected for its powerful capabilities in creating data visualizations. Using the basic frontend setup with D3 offered parity with what was taught in class and provided examples and allowed for granular control over the visualizations.
 
 ### Architecture
 
 #### `data/`
 
-...
+Contains the CSV files, a Python scripts used to scrape and process the data, as well as the images and font used for the frontend. 
 
 #### `js/` (JavaScript)
 
-...
+Contains some class-based visualizations modules (`CharacterChord`, `HorizontalBarChart`, `InfoPanel`, `CharacterWords`, etc.). Also contains files for functions like placing the map markers and changing scenes.
 
 #### `css/` (CSS)
 
@@ -87,7 +93,9 @@ To run this locally:
 
 ### Challenges
 
-There were a couple of distinct challenges encountered in this project. And they all can be generalized into two categories, data interpretation and effective visualizations. These often went hand in hand with trying to figure out how to interpret AND represent the data in the most effective manner.
+There were a couple of distinct challenges encountered in this project. And they all can be generalized into three categories, data collection, data interpretation, and effective visualizations. These often went hand in hand with trying to figure out how to interpret AND represent the data from what we had collected in the most effective manner.
+
+The most difficult part of the data collection process was collecting the location data. The transcript website often included the locations of each scene, but oftentimes general location names rather than specific references. Automating the location data mining proved difficult. Not only did we want specific locations for each character in each scene, we also needed those locations to be in terms of coordinates on our map of Middle Earth. We ultimately decided to do this data collection by hand by developing a draggable map marker that would output cx, cy values for the svg map and adding those values to the csv file. We leveraged some outside resources like the interactive map mentioned above to research these specific locations. Not only was this time consuming, but the way that this data was collected and organized impacted how we could visualize and interpret it later on.
 
 When it came to data interpretation, one of the hardest changes was trying to programmatically determine top phrases of each character. How do you even effectively label something as a phrase and not just a random collection of words? Then how do you determine from that which of those "phrases" are unique / identifiable with that character? For this problem we decided that a phrase could be any grouping of consecutive words within a sentence of length 2-8. From these we than tried to mathematically determine some level of uniqueness score to it between all of the characters and then grabbed the most visible frequently occurring ones. Then to make it to the word cloud representation of these, there had to be more than 3 occurrences of that phrase. This approach was aided by AI and some reading, but ultimately got capped at some point due to complexity and time constraints. This provides some insightful findings but doesn't one hundred percent accomplish what a standard expectation would be for the question "What are common phrases of the characters". This is a big thing that we want to look at in future work.
 
