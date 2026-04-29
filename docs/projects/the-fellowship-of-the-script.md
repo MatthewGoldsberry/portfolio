@@ -1,4 +1,4 @@
-o# Who You Gonna Call? 3-1-1!: Visual Disorder in Cincinnati
+# The Fellowship of the Script: An interactive visualization of LotR dialogues
 
 **Team Members:** [Matthew Goldsberry](https://github.com/MatthewGoldsberry) & [Isaac Dowdy](https://github.com/isaac-dowdy)
 
