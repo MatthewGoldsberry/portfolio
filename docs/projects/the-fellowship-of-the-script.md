@@ -143,7 +143,7 @@ These conclusions might seem obvious to anyone familiar with the story, but I br
 
 #### Python (Data Exploration)
 
-**Tools & Packages:** [`BeautifulSoup`](https://beautiful-soup-4.readthedocs.io/en/latest/), [`Requests`](https://requests.readthedocs.io/en/latest/), [Natural Language Toolkit (NLTK)](https://www.nltk.org/)
+**Tools & Packages:** [`BeautifulSoup`](https://beautiful-soup-4.readthedocs.io/en/latest/), [`Requests`](https://requests.readthedocs.io/en/latest/), [`Natural Language Toolkit (NLTK)`](https://www.nltk.org/)
 
 Python was used for the data pipeline primarily due to its ability to easily read and edit CSV data. The third party `Requests` library was used to interact with the online transcripts. `BeautifulSoup` and `NLTK` were used to process the language data.
 
