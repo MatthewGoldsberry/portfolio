@@ -157,14 +157,17 @@ I did not receive any non-AI help from outside this team during the project.
 
 ### Matthew Goldsberry
 
-* ...
+* **Scene Info Panel** - per-scene dialogue breakdown showing which characters spoke and what they said
+* **Character Info Panel** - three visualizations and some metadata summarizing the selected character's dialogue patterns and presence across all three films
+* **Visualization Panel** - scene co-occurrence chord chart showing how often characters shared scenes, and a bar chart of total lines spoken per character
+* **Contextual info icons** - tooltips throughout the application explaining data sources, methodology, and how to use the application
 
 ### Isaac Dowdy
 
-* Data scraping and parsing
-* Scene player
-* Scene Timeline
-* Map Visualization of characters
+* **Data pipeline** - scraped and parsed all dialogue from the source transcripts into a usable, structured CSV
+* **Scene player** - animated playback of scenes showing character dialogue appearing above their map nodes in real time
+* **Scene timeline** - temporal navigation bar spanning all three films, allowing users to jump to any scene and an animation to sequentially go through them
+* **Map character visualization** - dynamic character placement on the Middle Earth map that updates position and path history as the selected scene changes
 
 ### Joint Efforts
 
