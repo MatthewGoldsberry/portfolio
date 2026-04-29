@@ -17,6 +17,14 @@ Learn more about the organization at the [CubeCats website](https://uccubecats.g
 
 ---
 
+## [The Fellowship of the Script](./the-fellowship-of-the-script.md)
+
+An interactive data visualization exploring dialogue, movement, and character relationships across Peter Jackson's *The Lord of the Rings* trilogy. Built with D3.js and vanilla JavaScript.
+
+[**View the Live Application**](https://the-fellowship-of-the-script.vercel.app/)
+
+---
+
 ## [Who You Gonna Call? 3-1-1!: Visual Disorder in Cincinnati](./who-you-gonna-call.md)
 
 This project is an interactive data visualization designed to help users explore and understand patterns in 311 service requests made to the City of Cincinnati in 2025, with a focus on issues related to visual disorder.

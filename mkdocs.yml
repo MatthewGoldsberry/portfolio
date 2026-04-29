@@ -8,6 +8,7 @@ nav:
   - Projects:
     - Projects Overview: projects/projects.md
     # - CubeCats: projects/cube-cats.md
+    - The Fellowship of the Script: project/the-fellowship-of-the-script.md
     - Who You Gonna Call?: projects/who-you-gonna-call.md
     - A World in Data: projects/a-world-in-data.md
     - Smart Pong: projects/smart-pong.md
