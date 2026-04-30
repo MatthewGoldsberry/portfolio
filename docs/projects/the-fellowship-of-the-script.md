@@ -8,7 +8,7 @@
 
 ## Project Overview & Motivations
 
-This project is focused on creating an interactive visualization to explore data from the Lord of the Rings Extended Edition films. 
+This project is focused on creating an interactive visualization to explore data from the Lord of the Rings Extended Edition films.
 
 * **The Problem:** The data for this project was located on a fan-made website. Part of the challenge was to scrape and process this data, creating our own data files to work from. The project guidelines also allowed for a lot of creative freedom for this project, so it was up to this team to decide how to visualize and represent this data given a set of loose instructions.
 * **The Goal:** The goal of this application is to not only create a dashboard that is informative and allows the user to make conclusions about the dialogue from the Lord of the Rings films, but also to create an interesting, engaging experience that brings the user into the Lord of the Rings universe, driving curiosity, exploration, and appreciation of this fantastic work of literature and film.
@@ -17,14 +17,14 @@ This project is focused on creating an interactive visualization to explore data
 
 <figure markdown="span">
   <video controls loop muted playsinline width="700">
-    <source src="https://github.com/MatthewGoldsberry/portfolio/releases/download/v0.0.3/The.Fellowship.of.the.Script.Demo.mp4" type="video/mp4"> 
+    <source src="https://github.com/MatthewGoldsberry/portfolio/releases/download/v0.0.3/The.Fellowship.of.the.Script.Demo.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </figure>
 
 ## The Data
 
-The datasource for this project was taken from this website: [Lord of the Rings Transcripts](https://www.tk421.net/lotr/film/), which includes each movie broken down with links for each scene (32 scenes per film). Each scene page includes all dialogue attributed to the speaking characters, alongside bracketed stage directions, scene locations, and various pictures from the films. The transcripts are taken from the three Extended Edition Lord of the Rings films. 
+The datasource for this project was taken from this website: [Lord of the Rings Transcripts](https://www.tk421.net/lotr/film/), which includes each movie broken down with links for each scene (32 scenes per film). Each scene page includes all dialogue attributed to the speaking characters, alongside bracketed stage directions, scene locations, and various pictures from the films. The transcripts are taken from the three Extended Edition Lord of the Rings films.
 
 A large part of this project was the data collection. Since we started with just a website, this process looked like developing python scripts to scrape, process, and organize this data into a CSV file - more information on the technical details of this process can be found below in the Technical Implementation section. Additionally, as part of this project we chose to visualize character locations on a map of Middle Earth. This presented another data collection hurdle: translating listed scene locations into coordinates on the map. In addition to the above website, this [Interactive Map of Middle Earth](http://lotrproject.com/map/#zoom=3&lat=-1319&lon=1500&layers=BTTTTT) proved useful in decoding some of the scene locations.
 
@@ -180,18 +180,30 @@ The info button at the bottom right of the application calls a pop-up on hover o
 
 ### Different Narrative Lines
 
-One thing that the Lord of the Rings franchise accomplishes very well across the books and films is the intricate character development, especially for the nine members of the fellowship, and the multiple distinct subplots woven into one story. These different narrative lines and interactions between different characters is something that can be clearly seen when using this application. 
+One thing that the Lord of the Rings franchise accomplishes very well across the books and films is the intricate character development, especially for the nine members of the fellowship, and the multiple distinct subplots woven into one story. These different narrative lines and interactions between different characters is something that can be clearly seen when using this application.
 
 ![Paths](../assets/media/the-fellowship-of-the-script/paths.png)
 
-The paths feature is helpful to see which characters travel together and frequent the same areas on the map. For example, it shows the clear connections between Frodo and Sam, between Merry and Pippin, Pippin and Gandalf, as well as Legolas, Aragorn, and Gimli. In fact, these connections reflect the intricate subplots throuhgout these films: Sam and Frodo on their travel to Mount Doom in Gorgoroth, Merry and Pippin lost in Fangorn Forest, Legolas, Aragorn, and Gimli as they try to track down those two hobbits, Pippin and Gandalf at Gondor, and many more. 
+The paths feature is helpful to see which characters travel together and frequent the same areas on the map. For example, it shows the clear connections between Frodo and Sam, between Merry and Pippin, Pippin and Gandalf, as well as Legolas, Aragorn, and Gimli. In fact, these connections reflect the intricate subplots throughout these films: Sam and Frodo on their travel to Mount Doom in Gorgoroth, Merry and Pippin lost in Fangorn Forest, Legolas, Aragorn, and Gimli as they try to track down those two hobbits, Pippin and Gandalf at Gondor, and many more.
 
 ![Aragorn Chord](../assets/media/the-fellowship-of-the-script/aragorn-chord.png)
 ![Sam & Frodo Chord](../assets/media/the-fellowship-of-the-script/sam-frodo-chord.png)
 
-The scene co-occurance chord graph is also very useful in drawing similar conclusions. In the Two Towers, Aragorn shares scnenes with almost entirely Gimli and Legolas. Frodo and Sam frequently show up together in the Two Towers and Return of the King. 
+The scene co-occurrence chord graph is also very useful in drawing similar conclusions. In the Two Towers, Aragorn shares scenes with almost entirely Gimli and Legolas. Frodo and Sam frequently show up together in the Two Towers and Return of the King.
 
 These conclusions might seem obvious to anyone familiar with the story, but I bring it up to show that this application brings out the best of the Lord of the Rings in terms of its writing, dialogue, and story-telling. The dashboard allows the user to appreciate the story from new angles.
+
+### Surprising Line Counts
+
+Frodo is the main protagonist of the trilogy, but the line count data reveals some patterns that do not align with this 1-to-1 and provides us with some insights.
+
+To start, Gandalf leads the fellowship in total lines spoken across the trilogy, a semi-surprising result given that he is absent from a substantial portions of the first two movies. The explanation for this can be seen when checking out Gandalf's scene presence heatmap and seeing how dense in lines of text a lot of the scenes he did appear in were. This accounts for the offset in his absence.
+
+![Gandalf's Dialogue Density](../assets/media/the-fellowship-of-the-script/gandalfs-density.png)
+
+Another revealing aspect is the shift between Frodo and Sam over the course of the trilogy. In first movie, Frodo dominates the dialogue between the pair. But in the second movie, that dynamic starts to switch and Sam starts to talk a little more than Frodo. By the last movie, Sam dominates the pair in lines spoken. This mirrors the narrative arcs of these two, as the Ring starts to consume Frodo, making him become more reserved, Sam steps into the vocal anchor and source of hope for the pair. Portraying that underlying emotional shift in the pair through quantitative data with some context.
+
+![Frodo and Sam's lines over time](../assets/media/the-fellowship-of-the-script/frodo-sam-lines.png)
 
 ## Technical Implementation
 
