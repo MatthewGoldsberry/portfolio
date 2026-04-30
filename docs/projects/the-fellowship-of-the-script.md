@@ -34,7 +34,7 @@ At the start of the project, we established a requirement for ourselves: the map
 
 ### Initial Concept
 
-With all the data that needed represented in the project, a deliberate strategy had to be designed to arrange everything spatially.To address this we decided to put as much as we could in the "dead spots" of the map, areas where the characters would not travel close to, and have information hidden behind expansion modules that have to be opened. Those would be the main locations for a lot of the more specific data visualizations.
+With all the data that needed represented in the project, a deliberate strategy had to be designed to arrange everything spatially. To address this we decided to put as much as we could in the "dead spots" of the map, areas where the characters would not travel close to, and have information hidden behind expansion modules that have to be opened. Those would be the main locations for a lot of the more specific data visualizations.
 
 ### Sketches
 
@@ -172,7 +172,7 @@ The info button at the bottom right of the application calls a pop-up on hover o
 
 **What this shows:** Advanced Scene dialogue stats. This includes the number of lines each character spoke and the full dialogue.
 
-**Interactions:** Clicking on the section titles or carets allow for the expansion / collapsing of those sub sections. On hover over the bars, heatmap bins, or words in the cloud, that point will be emphasis and a tooltip containing additional information will appear. Selecting the wiki page button will redirect to an external wiki page about the character. The `Top Words` visualization has three different modes of representing word occurrence, `Most Used`, `Most Frequent`, and `Most Unique`.
+**Interactions:** Clicking on the section titles or carets allow for the expansion / collapsing of those sub sections. On hover over the bars, heatmap bins, or words in the cloud, that point will be emphasized and a tooltip containing additional information will appear. Selecting the wiki page button will redirect to an external wiki page about the character. The `Top Words` visualization has three different modes of representing word occurrence, `Most Used`, `Most Frequent`, and `Most Unique`.
 
 ![Character Info (Expanded)](../assets/media/the-fellowship-of-the-script/character-info-expanded.png)
 
@@ -186,8 +186,7 @@ One thing that the Lord of the Rings franchise accomplishes very well across the
 
 The paths feature is helpful to see which characters travel together and frequent the same areas on the map. For example, it shows the clear connections between Frodo and Sam, between Merry and Pippin, Pippin and Gandalf, as well as Legolas, Aragorn, and Gimli. In fact, these connections reflect the intricate subplots throughout these films: Sam and Frodo on their travel to Mount Doom in Gorgoroth, Merry and Pippin lost in Fangorn Forest, Legolas, Aragorn, and Gimli as they try to track down those two hobbits, Pippin and Gandalf at Gondor, and many more.
 
-![Aragorn Chord](../assets/media/the-fellowship-of-the-script/aragorn-chord.png)
-![Sam & Frodo Chord](../assets/media/the-fellowship-of-the-script/sam-frodo-chord.png)
+![Aragon Chord & Sam and Frodo Chord](../assets/media/the-fellowship-of-the-script/chords.png)
 
 The scene co-occurrence chord graph is also very useful in drawing similar conclusions. In the Two Towers, Aragorn shares scenes with almost entirely Gimli and Legolas. Frodo and Sam frequently show up together in the Two Towers and Return of the King.
 
